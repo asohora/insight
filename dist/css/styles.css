@@ -271,6 +271,22 @@ main p {
 	box-shadow:none;
 }
 
+#about p::first-letter{
+	font-size: 3em;
+	border: 5px double;
+	padding: .3rem 1rem;
+	line-height: 5rem;
+	color: var(--lighter);
+	background-color: var(--dark);
+	border-radius: 30%;
+}
+
+#about p::first-line {
+	text-transform:uppercase;
+	
+}
+
+
 #who {
 	grid-template:
 		"heading img" 4rem
@@ -394,7 +410,6 @@ aside {
 	background-color: var(--dark);
 	color:white;
 	padding-bottom: 1rem;
-
 }
 
 aside > div {
@@ -525,6 +540,7 @@ body {
 	aside .img {
 		height: 30px;
 		width: 30px;
+		align-self:start;
 	}
 	
 	aside .img img {
