@@ -515,3 +515,17 @@ body {
 	}
 	
 }
+
+@media (max-height:600px) {
+	aside h2 {
+		font-size: 1.5rem;
+	}
+	aside .img {
+		height: 30px;
+		width: 30px;
+	}
+	
+	aside .img img {
+		object-fit: contain;
+	}
+}
