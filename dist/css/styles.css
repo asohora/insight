@@ -281,12 +281,6 @@ main p {
 	border-radius: 30%;
 }
 
-#about p::first-line {
-	text-transform:uppercase;
-	
-}
-
-
 #who {
 	grid-template:
 		"heading img" 4rem
