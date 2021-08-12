@@ -393,6 +393,8 @@ main p {
 aside {
 	background-color: var(--dark);
 	color:white;
+	padding-bottom: 1rem;
+
 }
 
 aside > div {
