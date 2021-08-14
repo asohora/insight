@@ -107,7 +107,7 @@ header {
 	place-items:center;
 	position:relative;
 	height:calc(100vh - 4rem);
-	grid-auto-rows: max-content;
+	grid-rows: max-content 1fr max-content;
 	grid-template-areas:
 	"img img"
 	"h1 h1"
@@ -121,7 +121,8 @@ header .img {
 	box-shadow: 2px 2px 5px 0 black;
 	background-color: var(--dark);
 	grid-area: img;
-}
+	animation: top 1000ms;
+	}
 
 header .img img {
 	object-fit: contain;
@@ -151,7 +152,7 @@ header h1 {
 	color: var(--lighter);
 	text-shadow: 2px 2px var(--dark), -2px -2px var(--dark);
 	grid-area: h1;
-
+	animation: left 500ms;
 }
 
 header p {
@@ -159,9 +160,27 @@ header p {
 	color: var(--lighter);
 	text-shadow: 2px 2px var(--dark), -2px -2px var(--dark);
 	text-align:center;
-
+	animation: right 500ms;
 	grid-area: p;
 }
+
+
+@keyframes top {
+	0% {transform:translateY(-100vh)};
+	50% {transform:translateY(-100vh)};
+	100% {transform:translateY(0)};
+}
+
+@keyframes left {
+	0% {transform:translateX(-100vw)};
+	100% {transform:translateX(0)};
+}
+
+@keyframes right {
+	0% {transform:translateX(100vw)};
+	100% {transform:translateX(0)};
+}
+
 
 /* Nav */
 nav {
@@ -516,6 +535,7 @@ body {
 	header {
 		height: calc(100vh - 5.5rem);
 	}
+	
 	
 	nav ul {
 		flex-direction: column;
