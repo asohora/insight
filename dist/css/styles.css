@@ -107,14 +107,20 @@ header {
 	place-items:center;
 	position:relative;
 	height:calc(100vh - 4rem);
+	grid-auto-rows: max-content;
+	grid-template-areas:
+	"img img"
+	"h1 h1"
+	"p p";
 }
 
 header .img {
-	height: 250px;
-	width: 250px;
+	height: min(250px, 45vh);
+	width: min(250px, 45vh);
 	border-radius: 20%;
 	box-shadow: 2px 2px 5px 0 black;
 	background-color: var(--dark);
+	grid-area: img;
 }
 
 header .img img {
@@ -144,6 +150,7 @@ header .bg-img img {
 header h1 {
 	color: var(--lighter);
 	text-shadow: 2px 2px var(--dark), -2px -2px var(--dark);
+	grid-area: h1;
 
 }
 
@@ -152,6 +159,8 @@ header p {
 	color: var(--lighter);
 	text-shadow: 2px 2px var(--dark), -2px -2px var(--dark);
 	text-align:center;
+
+	grid-area: p;
 }
 
 /* Nav */
@@ -551,5 +560,19 @@ body {
 	
 	aside .img img {
 		object-fit: contain;
+	}
+	
+}
+
+@media (max-height: 400px) {
+	header {
+		grid-template-areas:
+		"img h1"
+		"img p";
+	}
+	
+	header .img {
+		width: min(200px, calc(100vh - 4.5rem));
+		height: min(200px, calc(100vh - 4.5rem));
 	}
 }
