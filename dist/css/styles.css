@@ -209,7 +209,7 @@ nav ul li {
 }
 
 nav ul li:hover,
-nav ul li:focus {
+nav ul li a:focus {
 	background-color: var(--dark);
 	color: white;
 }
@@ -457,11 +457,21 @@ aside > div {
 aside .img {
 	width: 100px;
 	transition: transform 250ms;
+	overflow:visible;
+
 }
 
-aside .img:hover,
-aside .img:focus {
+aside .img img {
+		transition: transform 250ms;
+
+}
+
+aside .img:hover {
 	transform:translateX(10px);
+}
+
+aside .img a:focus img {
+	transform: rotate(20deg);	
 }
 
 
@@ -554,7 +564,8 @@ body {
 		height: 0;
 	}
 	
-	nav ul li:hover a {
+	nav ul li:hover a,
+	nav ul li:focus a {
 		transform:translateY(-2px);
 	}
 	
