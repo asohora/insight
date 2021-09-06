@@ -394,8 +394,8 @@ address {
 
 
 .address-info iframe {
-	width:90vw;
-	height:80%;
+	width:min(80vw,300px);
+	height:min(100%,300px);
 }
 
 /* Footer */
