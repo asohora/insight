@@ -22,7 +22,8 @@ navButtonContainer.addEventListener("click", function(){
 
 
 window.addEventListener("keydown", function(){
-	event.preventDefault();
+	if (event.keyCode > 36 && event.keyCode < 41) {	event.preventDefault();
+}
 })
 
 window.addEventListener("keyup", function(event){
